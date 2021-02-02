@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>indexページ</title>
+<link href="/css/index.css" rel="stylesheet"></link>
+</head>
+<body>
+	<h1>CRUD処理学習用</h1>
+	<p>
+	CRUD処理の学習のためのページです。色々変更を加えていきます。<br>
+	題材がハースストーンなのはただの趣味です。
+	</p>
+	<section>
+		<p class="borderleft">ハースストーンバトルグラウンドのヒーローを登録していきたいと思います。</p><br>
+		<table>
+			<caption>ハースストーンバトルグラウンド：ヒーローリスト</caption>
+			<tr>
+				<th>ID</th>	
+				<th>ヒーロー</th>
+				<th>ヒーローパワー</th>
+			</tr>
+			<tr th:each="hero : ${list}">
+				<td th:text="${hero.id}"></td>
+				<td th:text="${hero.name}"></td>
+				<td th:text="*{hero.power}"></td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>

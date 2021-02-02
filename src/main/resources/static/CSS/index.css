@@ -1,0 +1,33 @@
+body {
+	color: #333333;
+	margin: 30px;
+	
+}
+
+section{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 12px;
+	table-layout: AUTO;
+}
+
+table th, table td {
+	border: 1px solid #ddd;
+	padding: 6px;
+	text-align: center;
+}
+
+table th {
+	background-color: #F2F2F2;
+	text-align: center;
+}
+
+.borderleft {
+	border-left: 5px solid #7ac0cc;
+	padding: 5px;
+}

@@ -5,4 +5,7 @@
   <select id="selectAll" resultType="com.example.demo.entity.Hero">
     select * from heros;
   </select>
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+  	INSERT INTO heros (id, name, power) VALUES (#{id}, #{name}, #{power})
+  </insert>
 </mapper>

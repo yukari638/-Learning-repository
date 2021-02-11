@@ -6,13 +6,27 @@
 <link href="/css/index.css" rel="stylesheet"></link>
 </head>
 <body>
-	<h1>CRUD処理学習用</h1>
+	<h1>サンプルページ</h1>
 	<p>
 	CRUD処理の学習のためのページです。色々変更を加えていきます。<br>
-	題材がハースストーンなのはただの趣味です。少しずつ変更してきます。
+	題材がハースストーンなのはただの趣味です。少しずつ変更してきます。<br>
+	ハースストーンバトルグラウンドのヒーローを登録していきたいと思います。
 	</p>
+	<!-- 登録フォーム -->
 	<section>
-		<p class="borderleft">ハースストーンバトルグラウンドのヒーローを登録していきたいと思います。</p><br>
+	<h2 class="borderleft">ヒーロー登録フォーム</h2>
+		<form action ="#" method = "post">
+			<p>ヒーロー名<br>
+			<input type="text" name="name"></p>
+			<p>ヒーローパワー<br>
+			<textarea name="power" cols="30" rows="2"></textarea></p>
+			<input type="submit" value="送信">
+			<input type="reset" value="リセット">
+		</form>
+	</section>
+	<!-- リスト -->
+	<section>
+	<h2 class="borderleft">ヒーローリスト</h2>
 		<table>
 			<caption>ハースストーンバトルグラウンド：ヒーローリスト</caption>
 			<tr>

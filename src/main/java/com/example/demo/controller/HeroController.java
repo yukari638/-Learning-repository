@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.entity.Hero;
-import com.example.demo.repository.HeroMapper;
+import com.example.demo.mapper.HeroMapper;
 
 /*
  *ヒーロー情報 Controller

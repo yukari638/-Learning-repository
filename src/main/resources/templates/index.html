@@ -12,18 +12,6 @@
 	題材がハースストーンなのはただの趣味です。少しずつ変更してきます。<br>
 	ハースストーンバトルグラウンドのヒーローを登録していきたいと思います。
 	</p>
-	<!-- 登録フォーム -->
-	<section>
-	<h2 class="borderleft">ヒーロー登録フォーム</h2>
-		<form action ="#" method = "post">
-			<p>ヒーロー名<br>
-			<input type="text" name="name"></p>
-			<p>ヒーローパワー<br>
-			<textarea name="power" cols="30" rows="2"></textarea></p>
-			<input type="submit" value="送信">
-			<input type="reset" value="リセット">
-		</form>
-	</section>
 	<!-- リスト -->
 	<section>
 	<h2 class="borderleft">ヒーローリスト</h2>
@@ -40,6 +28,7 @@
 				<td th:text="*{hero.power}"></td>
 			</tr>
 		</table>
+		<div><a th:href="@{hero/add}">新規登録</a></div>
 	</section>
 </body>
 </html>

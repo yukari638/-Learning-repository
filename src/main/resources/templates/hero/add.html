@@ -7,11 +7,11 @@
 </head>
 <body>
 	<h1 class="borderleft">ヒーロー登録フォーム</h1>
-	<form action="#" method="post">
+	<form th:action="@{/hero/create}" th:object="${heroRequest}" th:method="post">
 		<p>ヒーロー名<br>
-		<input type="text" name="name"></p>
+		<input type="text" th:field="*{name}"></p>
 		<p>ヒーローパワー<br>
-		<textarea name="power" cols="50" rows="2"></textarea></p>
+		<textarea th:field="*{power}" cols="50" rows="2"></textarea></p>
 		<input type="submit" value="登録"> <input type="reset" value="リセット">
 	</form>
 </body>

@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.example.demo.entity.Hero;
 import com.example.demo.repository.HeroMapper;
 
+/*
+ *ヒーロー情報 Controller
+ */
+
 @Controller
 public class HeroController {
 

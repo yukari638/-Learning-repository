@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>indexページ</title>
-<link href="/css/index.css" rel="stylesheet"></link>
+	<meta charset="UTF-8">
+	<title>indexページ</title>
+	<link href="/css/index.css" rel="stylesheet"></link>
 </head>
 <body>
 	<h1>サンプルページ</h1>
@@ -20,12 +20,18 @@
 			<tr>
 				<th>ID</th>	
 				<th>ヒーロー</th>
-				<th>ヒーローパワー</th>
+				<th>ヒーローパワー名</th>
+				<th>コスト</th>
+				<th>ヒーローパワー内容</th>
+				<th>選択除外時</th>
 			</tr>
-			<tr th:each="hero : ${list}">
-				<td th:text="${hero.id}"></td>
-				<td th:text="${hero.name}"></td>
-				<td th:text="*{hero.power}"></td>
+			<tr th:each="hero : ${list}" th:object="${hero}">
+				<td th:text="*{id}"></td>
+				<td th:text="*{name}"></td>
+				<td th:text="*{powerName}"></td>
+				<td th:text="*{powerActivate}"></td>
+				<td th:text="*{power}"></td>
+				<td th:text="*{typeBan}"></td>
 			</tr>
 		</table>
 		<div><a th:href="@{/hero/add}">新規登録</a></div>

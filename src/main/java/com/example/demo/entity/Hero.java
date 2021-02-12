@@ -22,8 +22,23 @@ public class Hero {
 	private String name;
 	
 	/*
+	 * ヒーローパワー名
+	 */
+	private String powerName;
+	
+	/*
+	 * ヒーローパワー発動型、コスト
+	 */
+	private String powerActivate;
+	
+	/*
 	 * ヒーローパワーの内容
 	 */
 	private String power;
+	
+	/*
+	 * ヒーローBan種族
+	 */
+	private String typeBan;
 	
 }

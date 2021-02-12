@@ -21,7 +21,23 @@ public class HeroRequest {
 	private String name;
 	
 	/*
+	 * ヒーローパワー名
+	 */
+	private String powerName;
+	
+	/*
+	 * ヒーローパワー発動型、コスト
+	 */
+	private String powerActivate;
+	
+	/*
 	 * ヒーローパワー
 	 */
 	private String power;
+	
+	/*
+	 * ヒーローBan種族
+	 */
+	private String typeBan;
+	
 }

@@ -10,8 +10,14 @@
 	<form th:action="@{/hero/create}" th:object="${heroRequest}" th:method="post">
 		<p>ヒーロー名<br>
 		<input type="text" th:field="*{name}"></p>
+		<p>ヒーローパワー名<br>
+		<input type="text" th:field="*{powerName}"></p>
+		<p>コスト<br>
+		<input type="text" th:field="*{powerActivate}"></p>
 		<p>ヒーローパワー<br>
 		<textarea th:field="*{power}" cols="50" rows="2"></textarea></p>
+		<p>ヒーロー選択除外種族<br>
+		<input type="text" th:field="*{typeBan}"></p>
 		<input type="submit" value="登録"> <input type="reset" value="リセット">
 	</form>
 </body>

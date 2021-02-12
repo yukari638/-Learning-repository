@@ -3,38 +3,50 @@
 <head>
 	<meta charset="UTF-8">
 	<title>indexページ</title>
+	<link href="/css/template.css" rel="stylesheet"></link>
 	<link href="/css/index.css" rel="stylesheet"></link>
 </head>
 <body>
-	<h1>サンプルページ</h1>
-	<p>
-	CRUD処理の学習のためのページです。色々変更を加えていきます。<br>
-	題材がハースストーンなのはただの趣味です。少しずつ変更してきます。<br>
-	ハースストーンバトルグラウンドのヒーローを登録していきたいと思います。
-	</p>
-	<!-- リスト -->
-	<section>
-	<h2 class="borderleft">ヒーローリスト</h2>
-		<table>
-			<caption>ハースストーンバトルグラウンド：ヒーローリスト</caption>
-			<tr>
-				<th>ID</th>	
-				<th>ヒーロー</th>
-				<th>ヒーローパワー名</th>
-				<th>コスト</th>
-				<th>ヒーローパワー内容</th>
-				<th>選択除外時</th>
-			</tr>
-			<tr th:each="hero : ${list}" th:object="${hero}">
-				<td th:text="*{id}"></td>
-				<td th:text="*{name}"></td>
-				<td th:text="*{powerName}"></td>
-				<td th:text="*{powerActivate}"></td>
-				<td th:text="*{power}"></td>
-				<td th:text="*{typeBan}"></td>
-			</tr>
-		</table>
-		<div><a th:href="@{/hero/add}">新規登録</a></div>
-	</section>
+	<!-- header -->
+	<header>
+		<h1>サンプルページ</h1>
+	</header>
+	
+	<!-- body -->
+	<div class="body">
+		<section>
+			<h2 class="borderleft">About</h2>
+			<p>
+			CRUD処理の学習のためのページです。色々変更を加えていきます。<br>
+			題材がハースストーンなのはただの趣味です。少しずつ変更してきます。<br>
+			ハースストーンバトルグラウンドのヒーローを登録していきたいと思います。
+			</p>
+		</section>
+		<section>
+		<h2 class="borderleft">ヒーローリスト</h2>
+			<table>
+				<tr>
+					<th>ID</th>	
+					<th>ヒーロー</th>
+					<th>ヒーローパワー名</th>
+					<th>コスト</th>
+					<th>ヒーローパワー内容</th>
+					<th>選択除外時</th>
+				</tr>
+				<tr th:each="hero : ${list}" th:object="${hero}">
+					<td th:text="*{id}"></td>
+					<td th:text="*{name}"></td>
+					<td th:text="*{powerName}"></td>
+					<td th:text="*{powerActivate}"></td>
+					<td th:text="*{power}"></td>
+					<td th:text="*{typeBan}"></td>
+				</tr>
+			</table>
+			<a th:href="@{/hero/add}" class="btn">新規登録</a>
+		</section>
+	</div>
+	<!-- footer -->
+	<footer>
+	</footer>
 </body>
 </html>

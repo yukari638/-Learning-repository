@@ -1,0 +1,45 @@
+/* html,bodyタグの設定 */
+html, body{
+    margin: 0;         /* 余白の削除 */
+    padding: 0;        /* 余白の削除 */
+    width:100%;
+    height:100%;
+    color: #333333;	/*テキストカラー*/
+}
+
+/* ヘッダー */
+header { 
+	width: 100%;				/* 横幅 */
+	height: 100px;				/* 縦幅 */
+    padding: 30px 4% 10px;		/* header内の余白 */
+    background-color: #e6e6e6;		/* 背景色 */
+    position: absolute;			/* 場所指定：相対位置に指定 */
+    top: 0;						/* 場所指定：上から0pxの位置 */
+}
+
+/* フッター */
+footer { 
+	width: 100%;				/* 横幅 */
+	height: 20px;				/* 縦幅 */
+    padding: 30px 4% 10px;		/* header内の余白 */
+    background-color: #e6e6e6;		/* 背景色 */  
+    position: relative;
+    top: 150px;
+    
+}
+
+/* ボディの定義 */
+.body{
+    margin: 50px;
+    background-color: #fff;
+    position: relative;
+    top: 150px;
+}
+
+section {
+	margin: 30px 0px 80px 0px;
+}
+
+p {
+	font-size: 15px;
+}

@@ -6,6 +6,7 @@
     select * from heros;
   </select>
   <insert id="insert" useGeneratedKeys="true" keyProperty="id">
-  	INSERT INTO heros (id, name, power) VALUES (#{id}, #{name}, #{power})
+  	INSERT INTO heros (id, name, powerName, powerActivate, power, typeBan) 
+  		VALUES (#{id}, #{name}, #{powerName}, #{powerActivate}, #{power}, #{typeBan})
   </insert>
 </mapper>

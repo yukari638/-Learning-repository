@@ -40,7 +40,7 @@ public class HeroController {
 	 * @return ヒーロー情報一覧画面
 	 */
 	@RequestMapping(value = "/hero/add", method = RequestMethod.GET)
-	public String displayAdd(Model model) {
+	public String heroAdd(Model model) {
 		model.addAttribute("heroRequest", new HeroRequest());
 		return "hero/add";
 	}

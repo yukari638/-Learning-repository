@@ -1,15 +1,14 @@
-package com.example.demo.entity;
+package com.example.demo.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /*
- * ヒーロー登録情報 Entity
+ * データを格納する箱
+ * ヒーロー情報　リクエストデータ
  */
 
-@Getter
-@Setter
-public class Hero {
+@Data
+public class HeroRequest {
 
 	/*
 	 * ID
@@ -32,7 +31,7 @@ public class Hero {
 	private String powerActivate;
 	
 	/*
-	 * ヒーローパワーの内容
+	 * ヒーローパワー
 	 */
 	private String power;
 	

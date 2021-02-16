@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>ヒーロー登録フォーム</title>
+	<link href="/css/template.css" rel="stylesheet"></link>
+	<link href="/css/add.css" rel="stylesheet"></link>
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<h1>サンプルページ</h1>
+	</header>
+	<div class="body">
+		<div class=fromBackGround>
+			<h2 class="borderleft">ヒーロー登録フォーム</h2>
+			<form th:action="@{/hero/create}" th:object="${heroRequest}" th:method="post">
+				<p>ヒーロー名<br>
+				<input class="input" type="text" th:field="*{name}"></p>
+				<p>ヒーローパワー名<br>
+				<input class="input" type="text" th:field="*{powerName}"></p>
+				<p>コスト<br>
+				<input class="input" type="text" th:field="*{powerActivate}"></p>
+				<p>ヒーローパワー<br>
+				<textarea th:field="*{power}" cols="50" rows="3"></textarea></p>
+				<p>ヒーロー選択除外種族<br>
+				<input class="input" type="text" th:field="*{typeBan}"></p>
+				<input class="btn" type="submit" value="登録"> <input class="btn" type="reset" value="リセット">
+			</form>
+			</div>
+	</div>
+</body>
+</html>

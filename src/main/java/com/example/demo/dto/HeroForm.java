@@ -1,7 +1,5 @@
 package com.example.demo.dto;
 
-import lombok.Data;
-
 /*
  * データを格納する箱
  * ヒーロー情報　リクエストデータ

@@ -52,7 +52,7 @@ public class HeroController {
 	 * @return ヒーロー情報一覧画面
 	 */
 	@RequestMapping(value="/hero/create", method=RequestMethod.POST)
-    public String create(@ModelAttribute HeroRequest heroRequest, Model model) {
+    public String heroCreate(@ModelAttribute HeroRequest heroRequest, Model model) {
 		// ヒーロー情報の登録
 		heroMapper.insert(heroRequest);
 		return "redirect:/index";

@@ -11,7 +11,7 @@ import lombok.Data;
 public class HeroForm {
 
 	/*
-	 * ID
+	 * ID　自動で入る。
 	 */
 	private Integer id;
 	

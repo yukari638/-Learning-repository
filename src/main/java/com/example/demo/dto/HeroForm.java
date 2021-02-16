@@ -10,38 +10,30 @@ import javax.validation.constraints.Size;
 
 public class HeroForm {
 
-	/*
-	 * ID　自動で入る。
-	 */
+	//フィールド
+	
+	/* ID　自動で入る */
 	private Integer id;
 	
-	/*
-	 * ヒーロー名
-	 */
+	/* ヒーロー名 */
 	@NotNull(message="必須項目です")
 	@Size(min=1, max=20, message="20文字以内で入力してください")
 	private String name;
 	
-	/*
-	 * ヒーローパワー名
-	 */
+	/* ヒーローパワー名 */
 	private String powerName;
 	
-	/*
-	 * ヒーローパワー発動型、コスト
-	 */
+	/* ヒーローパワー発動型、コスト */
 	private String powerActivate;
 	
-	/*
-	 * ヒーローパワー内容
-	 */
+	/* ヒーローパワー内容 */
 	private String power;
 	
-	/*
-	 * ヒーローBan種族
-	 */
+	/* ヒーローBan種族 */
 	private String typeBan;
 	
+	
+	//メソッド
 	
 	public Integer getId() {
 		return id;

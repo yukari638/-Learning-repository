@@ -2,7 +2,7 @@ package com.example.demo.dto;
 
 /*
  * データを格納する箱
- * ヒーロー情報　リクエストデータ
+ * ヒーロー情報　フォームデータ
  */
 
 public class HeroForm {
@@ -12,6 +12,33 @@ public class HeroForm {
 	 */
 	private Integer id;
 	
+	/*
+	 * ヒーロー名
+	 */
+	
+	private String name;
+	
+	/*
+	 * ヒーローパワー名
+	 */
+	private String powerName;
+	
+	/*
+	 * ヒーローパワー発動型、コスト
+	 */
+	private String powerActivate;
+	
+	/*
+	 * ヒーローパワー内容
+	 */
+	private String power;
+	
+	/*
+	 * ヒーローBan種族
+	 */
+	private String typeBan;
+	
+	
 	public Integer getId() {
 		return id;
 	}
@@ -19,11 +46,6 @@ public class HeroForm {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-	/*
-	 * ヒーロー名
-	 */
-	private String name;
 
 	public String getName() {
 		return name;
@@ -32,11 +54,6 @@ public class HeroForm {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	/*
-	 * ヒーローパワー名
-	 */
-	private String powerName;
 	
 	public String getPowerName() {
 		return powerName;
@@ -46,11 +63,6 @@ public class HeroForm {
 		this.powerName = powerName;
 	}
 
-	/*
-	 * ヒーローパワー発動型、コスト
-	 */
-	private String powerActivate;
-	
 	public String getPowerActivate() {
 		return powerActivate;
 	}
@@ -58,11 +70,6 @@ public class HeroForm {
 	public void setPowerActivate(String powerActivate) {
 		this.powerActivate = powerActivate;
 	}
-
-	/*
-	 * ヒーローパワー内容
-	 */
-	private String power;
 	
 	public String getPower() {
 		return power;
@@ -71,11 +78,6 @@ public class HeroForm {
 	public void setPower(String power) {
 		this.power = power;
 	}
-
-	/*
-	 * ヒーローBan種族
-	 */
-	private String typeBan;
 	
 	public String getTypeBan() {
 		return typeBan;

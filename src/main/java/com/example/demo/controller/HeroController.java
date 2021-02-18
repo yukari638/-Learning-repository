@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,12 +49,16 @@ public class HeroController {
 	
 	/**
 	 * ヒーロー新規登録
-	 * @param heroForm リクエストデータ
+	 * @param heroForm フォームデータ
 	 * @param model Model
 	 * @return ヒーロー情報一覧画面
 	 */
-	@RequestMapping(value="/hero/create", method=RequestMethod.POST)
-    public String heroCreate(@ModelAttribute HeroForm heroForm, Model model) {
+	@RequestMapping(value="/hero/add", method=RequestMethod.POST)
+    public String heroCreate(@Validated @ModelAttribute HeroForm heroForm, BindingResult result, Model model) {
+		//入力値のエラー判断
+		if (result.hasErrors()) {
+			return "/hero/add";
+		}
 		// ヒーロー情報の登録
 		heroMapper.insert(heroForm);
 		return "redirect:/index";

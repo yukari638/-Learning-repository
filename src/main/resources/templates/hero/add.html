@@ -15,9 +15,10 @@
 	<div class="body">
 		<div class=fromBackGround>
 			<h2 class="borderleft">ヒーロー登録フォーム</h2>
-			<form th:action="@{/hero/create}" th:object="${heroForm}" th:method="post">
+			<form th:action="@{/hero/add}" th:object="${heroForm}" th:method="post">
 				<p>ヒーロー名<br>
 				<input class="input" type="text" th:field="*{name}"></p>
+				<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
 				<p>ヒーローパワー名<br>
 				<input class="input" type="text" th:field="*{powerName}"></p>
 				<p>コスト<br>

@@ -21,15 +21,19 @@ public class HeroForm {
 	private String name;
 	
 	/* ヒーローパワー名 */
+	@Size(max=20, message="20文字以内で入力してください")
 	private String powerName;
 	
 	/* ヒーローパワー発動型、コスト */
+	@Size(max=5, message="５文字以内で入力してください")
 	private String powerActivate;
 	
 	/* ヒーローパワー内容 */
+	@Size(max=100, message="100文字以内で入力してください")
 	private String power;
 	
 	/* ヒーローBan種族 */
+	@Size(max=10, message="10文字以内で入力してください")
 	private String typeBan;
 	
 	

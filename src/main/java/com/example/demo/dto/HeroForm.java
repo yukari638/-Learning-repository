@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 /*
@@ -16,8 +16,8 @@ public class HeroForm {
 	private Integer id;
 	
 	/* ヒーロー名 */
-	@NotNull(message="必須項目です")
-	@Size(min=1, max=20, message="20文字以内で入力してください")
+	@NotBlank
+	@Size(min=1, max=20, message="必須項目です。20文字以内で入力してください")
 	private String name;
 	
 	/* ヒーローパワー名 */

@@ -12,7 +12,7 @@ header {
 	width: 100%;				/* 横幅 */
 	height: 100px;				/* 縦幅 */
     padding: 30px 4% 10px;		/* header内の余白 */
-    background-color: #e6e6e6;		/* 背景色 */
+    background-color: #7ac0cc;		/* 背景色 */
     position: absolute;			/* 場所指定：相対位置に指定 */
     top: 0;						/* 場所指定：上から0pxの位置 */
 }
@@ -30,16 +30,31 @@ footer {
 
 /* ボディの定義 */
 .body{
-    margin: 50px;
+    padding: 50px;
     background-color: #fff;
     position: relative;
     top: 150px;
 }
 
+/* セクション */
 section {
 	margin: 30px 0px 80px 0px;
 }
 
+/* pタグ */
 p {
 	font-size: 15px;
+}
+
+/* ページタイトル */
+h1 {
+	color: #FFF;
+}
+
+h1 a {
+	color: #FFF
+}
+
+h1 a:visited {
+	color: #FFF
 }

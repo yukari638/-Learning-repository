@@ -10,30 +10,50 @@
 <body>
 	<!-- header -->
 	<header>
-		<h1>サンプルページ</h1>
+		<h1><a th:href="@{/index}">サンプルページ</a></h1>
 	</header>
 	<div class="body">
 		<div class=fromBackGround>
 			<h2 class="borderleft">ヒーロー登録フォーム</h2>
-			<form th:action="@{/hero/add}" th:object="${heroForm}" th:method="post">
-				<p>ヒーロー名<br>
-				<input class="input" type="text" th:field="*{name}"></p>
-				<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
-				<p>ヒーローパワー名<br>
-				<input class="input" type="text" th:field="*{powerName}"></p>
-				<div th:if="${#fields.hasErrors('powerName')}" th:errors="*{powerName}"></div>
-				<p>コスト<br>
-				<input class="input" type="text" th:field="*{powerActivate}"></p>
-				<div th:if="${#fields.hasErrors('powerActivate')}" th:errors="*{powerActivate}"></div>
-				<p>ヒーローパワー<br>
-				<textarea th:field="*{power}" cols="50" rows="3"></textarea></p>
-				<div th:if="${#fields.hasErrors('power')}" th:errors="*{power}"></div>
-				<p>ヒーロー選択除外種族<br>
-				<input class="input" type="text" th:field="*{typeBan}"></p>
-				<div th:if="${#fields.hasErrors('typeBan')}" th:errors="*{typeBan}"></div>
-				<input class="btn" type="submit" value="登録"> <input class="btn" type="reset" value="リセット">
-			</form>
-			</div>
+				<form th:action="@{/hero/add}" th:object="${heroForm}" th:method="post">
+					<table>
+					<tbody>
+					<tr>
+					<td>ヒーロー名</td>
+					<td><input class="input" type="text" th:field="*{name}">
+					<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div></td>
+					</tr>
+					
+					<tr>
+					<td>ヒーローパワー名</td>
+					<td><input class="input" type="text" th:field="*{powerName}">
+					<div th:if="${#fields.hasErrors('powerName')}" th:errors="*{powerName}"></div></td>
+					</tr>
+					
+					<tr>
+					<td>コスト</td>
+					<td><input class="input" type="text" th:field="*{powerActivate}">
+					<div th:if="${#fields.hasErrors('powerActivate')}" th:errors="*{powerActivate}"></div></td>
+					</tr>
+					
+					<tr>
+					<td>ヒーローパワー</td>
+					<td><textarea class="input" th:field="*{power}" cols="50" rows="3"></textarea>
+					<div th:if="${#fields.hasErrors('power')}" th:errors="*{power}"></div></td>
+					</tr>
+					
+					<tr>
+					<td>ヒーロー選択除外種族</td>
+					<td><input class="input" type="text" th:field="*{typeBan}">
+					<div th:if="${#fields.hasErrors('typeBan')}" th:errors="*{typeBan}"></div></td>
+					</tr>
+					</tbody>
+					</table>
+					
+					<input class="btn" type="submit" value="登録">
+					<input class="btn" type="reset" value="リセット">
+				</form>
+		</div>
 	</div>
 </body>
 </html>

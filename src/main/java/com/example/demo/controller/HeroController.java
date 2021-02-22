@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.dto.Hero;
 import com.example.demo.dto.HeroForm;
-import com.example.demo.mapper.HeroMapper;
+import com.example.demo.service.HeroListService;
 
 /*
  *ヒーロー情報 Controller
@@ -24,14 +24,14 @@ import com.example.demo.mapper.HeroMapper;
 public class HeroController {
 
 	@Autowired
-	HeroMapper heroMapper;
+	private HeroListService service;
 	
 	/*
 	 * ヒーロー情報一覧表示
 	 */
 	@GetMapping(value = "/index")
 	public String heroList(Model model) {
-		List<Hero> list = heroMapper.selectAll();
+		List<Hero> list = service.searchAll();
 		model.addAttribute("list", list);
 		return "index";
 	}
@@ -60,7 +60,7 @@ public class HeroController {
 			return "/hero/add";
 		}
 		// ヒーロー情報の登録
-		heroMapper.insert(heroForm);
+		service.register(heroForm);
 		return "redirect:/index";
 	}
 	

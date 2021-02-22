@@ -14,7 +14,7 @@ import com.example.demo.entity.Hero;
 @Mapper
 public interface HeroMapper {
 	
-	//herosTable内全てを表示
+	//herosTable内全てを取得
 	List<Hero> selectAll();
 	
 	//Table:herosに新規登録

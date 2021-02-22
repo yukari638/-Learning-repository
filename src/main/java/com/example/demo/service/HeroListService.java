@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import org.springframework.stereotype.Service;
 
 /*
  * ヒーローリストに関わるサービスクラスです。
@@ -7,6 +8,10 @@ package com.example.demo.service;
  *  @author yukari
  */
 
+@Service
 public class HeroListService {
+	
+	
+	
 	
 }

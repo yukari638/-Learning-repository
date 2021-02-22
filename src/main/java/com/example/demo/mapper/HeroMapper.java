@@ -14,10 +14,10 @@ import com.example.demo.dto.HeroForm;
 @Mapper
 public interface HeroMapper {
 	
-	//herosTable内全てを取得
+	//herosTable内全て検索、取得
 	List<Hero> selectAll();
 	
-	//Table:herosに新規登録
-	void insert(HeroForm heroFrom);
+	//herosTableに新規登録
+	void insert(HeroForm heroForm);
 
 }

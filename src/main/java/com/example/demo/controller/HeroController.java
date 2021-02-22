@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.demo.dto.Hero;
 import com.example.demo.dto.HeroForm;
-import com.example.demo.entity.Hero;
 import com.example.demo.mapper.HeroMapper;
 
 /*
